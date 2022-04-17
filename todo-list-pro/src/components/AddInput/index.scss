@@ -1,0 +1,33 @@
+.input__wrapper {
+  height: calc(100vh - .4rem);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 9;
+  &--main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    input {
+      display: inline-block;
+      flex: 1;
+      font-size: 0.16rem;
+      color: #333;
+      border: .001rem solid rgb(235, 235, 235);
+      padding: 0 0 0 .1rem;
+      touch-action: none;
+    }
+    button {
+      width: .6rem;
+      height: 0.4rem;
+    }
+  }
+  &--mask {
+    flex: 1;
+    background-color: rgba(0, 0, 0, .6);
+  }
+}

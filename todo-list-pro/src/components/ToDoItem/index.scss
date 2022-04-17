@@ -1,0 +1,32 @@
+.todo__item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: .6rem;
+  padding: 0 0.1rem;
+  border-bottom: .01rem solid rgb(235, 235, 235);
+  .todo__checkbox {
+    margin-right: .08rem;
+  }
+  .doto__main {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &--content {
+      vertical-align: middle;
+      font-size: 0.14rem;
+    }
+  }
+  .toto__otps {
+    button {
+      font-size: 0.12rem;
+      display: inline-block;
+      margin-left: 0.04rem;
+      border-radius: .08rem;
+    }
+  }
+}
