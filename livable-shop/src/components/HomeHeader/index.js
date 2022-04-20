@@ -1,24 +1,23 @@
 import React from "react";
+import { Link } from 'react-router-dom'
+import SearchInput from "../SearchInput";
 import './index.scss'
 
-function Header () {
+export default function Header ({ cityName }) {
   return (
     <div className="home__header clear-fixed">
-      <div className="home__header--left">
-        <span>北京</span>
+      <Link className="home__header--left" to="/city">
+        <span>{ cityName }</span>
         <i className="iconfont">&#xe772;</i>
-      </div>
+      </Link>
       <div className="home__header--right">
         <i className="iconfont">&#xe7b8;</i>
       </div>
       <div className="home__header--center">
         <div className="search__wrapper">
-          <i className="iconfont">&#xe621;</i>
-          <input type="text" />
+          <SearchInput />
         </div>
       </div>
     </div>
   )
 }
-
-export default Header

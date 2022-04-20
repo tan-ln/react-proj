@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react";
 import HotView from "../HotView";
-import api from '../../../api'
+import api from '../../../../api'
 
-function HotList () {
+function HotList ({ cityName }) {
   const [hotList1, setHotList1] = useState([])
   const [hotList2, setHotList2] = useState([])
 
   useEffect(() => {
-    api.getHomeHot1().then(res => {
+    api.getHomeHot1({ cityName }).then(res => {
       if (res.data.status === 200) {
         setHotList1(res.data.data)
       }
     })
-  }, [])
+  }, [cityName])
   useEffect(() => {
-    api.getHomeHot2().then(res => {
+    api.getHomeHot2({ cityName }).then(res => {
       if (res.data.status === 200) {
         setHotList2(res.data.data)
       }
     })
-  }, [])
+  }, [cityName])
 
   return (
     <div className="hot__list">

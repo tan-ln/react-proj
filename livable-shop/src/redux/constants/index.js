@@ -1,0 +1,7 @@
+const INIT_CITY = 'INIT_CITY'
+const CHANGE_CITY = 'CHANGE_CITY'
+
+export {
+  INIT_CITY,
+  CHANGE_CITY
+}

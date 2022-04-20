@@ -7,25 +7,25 @@ function Nav () {
     <div className="nav__wrapper">
       <ul className="clear-fixed">
         <li>
-          <NavLink className={ ({isActive}) => isActive ? 'selected' : '' } to="/">
+          <NavLink exact activeClassName="selected" to="/">
             <i className="iconfont">&#xe619;</i>
             首页
           </NavLink>  
         </li>
         <li>
-          <NavLink className={ ({isActive}) => isActive ? 'selected' : '' } to="/shop">
+          <NavLink activeClassName="selected" to="/shop">
             <i className="iconfont">&#xec90;</i>
             商城
           </NavLink>  
         </li>
         <li>
-          <NavLink className={ ({isActive}) => isActive ? 'selected' : '' } to="/life">
+          <NavLink activeClassName="selected" to="/life">
             <i className="iconfont">&#xe673;</i>
             生活服务
           </NavLink>  
         </li>
         <li>
-          <NavLink className={ ({isActive}) => isActive ? 'selected' : '' } to="/user">
+          <NavLink activeClassName="selected" to="/user">
             <i className="iconfont">&#xe643;</i>
             我的
           </NavLink>  

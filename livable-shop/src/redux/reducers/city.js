@@ -1,0 +1,18 @@
+import { CHANGE_CITY, INIT_CITY } from "../constants";
+
+const defaultState = {
+  cityName: '北京'
+}
+
+const city = (state = defaultState, action) => {
+  switch(action.type) {
+    case INIT_CITY:
+      return { cityName: action.cityName }
+    case CHANGE_CITY:
+      return { cityName: action.cityName }
+    default:
+      return state
+  }
+}
+
+export default city

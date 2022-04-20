@@ -1,18 +1,27 @@
 const express = require('express')
+const url = require('url')
 const router = express.Router()
 const home_hot = require('./data/home.js')
 
 router.get('/home/hot1', (req, resp) => {
+  const city = req.query.cityName
+  const data = home_hot.hot1.map(item => {
+    return {...item, title: city + item.title + '__new'}
+  })
   resp.send({
     status: 200,
-    data: home_hot.hot1
+    data
   })
 })
 
 router.get('/home/hot2', (req, resp) => {
+  const city = url.parse(req.url, true).query.cityName
+  const data = home_hot.hot2.map(item => {
+    return {...item, title: city + item.title + '__hot'}
+  })
   resp.send({
     status: 200,
-    data: home_hot.hot2
+    data
   })
 })
 
