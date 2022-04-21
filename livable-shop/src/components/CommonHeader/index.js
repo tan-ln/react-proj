@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from 'react-router-dom'
 import './index.scss'
 
-function CommonHeader ({ title, history }) {
+function CommonHeader ({ children, history }) {
   // 返回上一页
   const handleClickBack = () => {
     history.go(-1)
@@ -14,7 +14,9 @@ function CommonHeader ({ title, history }) {
       <span className="back-icon" onClick={ handleClickBack }>
         <i className="iconfont">&#xe608;</i>
       </span>
-      <h1>{ title }</h1>
+      {
+        children
+      }
     </div>
   )
 }

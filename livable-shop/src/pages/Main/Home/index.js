@@ -12,6 +12,7 @@ function Home () {
       <Header cityName={ city.cityName } />
       <Swiper />
       <HotList cityName={ city.cityName } />
+      <HotList cityName={ city.cityName } />
     </div>
   )
 }

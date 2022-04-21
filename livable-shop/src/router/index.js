@@ -15,11 +15,11 @@ const AppRouter = () => {
       <Switch>
         <Route path="/city" component={ City }></Route>
         <Route path="/search" component={ Search }></Route>
-        <Layout path="/">
+        <Layout>
         {/* 4 导航页面共享组件 */}
           <Nav />
           <Switch>
-            <Route path="/" component={ Home }></Route>
+            <Route exact path="/" component={ Home }></Route>
             <Route path="/life" component={ LifeService }></Route>
             <Route path="/shop" component={ Shop }></Route>
             <Route path="/user" component={ User }></Route>

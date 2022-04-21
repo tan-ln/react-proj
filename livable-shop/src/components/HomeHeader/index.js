@@ -10,13 +10,13 @@ export default function Header ({ cityName }) {
         <span>{ cityName }</span>
         <i className="iconfont">&#xe772;</i>
       </Link>
-      <div className="home__header--right">
-        <i className="iconfont">&#xe7b8;</i>
-      </div>
       <div className="home__header--center">
-        <div className="search__wrapper">
+        <div className="header__search">
           <SearchInput />
         </div>
+      </div>
+      <div className="home__header--right">
+        <i className="iconfont">&#xe7b8;</i>
       </div>
     </div>
   )

@@ -59,6 +59,15 @@ npm i redux react-redux -S
 npm i redux-devtools-extension -D
 ```
 
+## other
+1. getBoundingClientRect() 获取元素位置
+> 该函数返回一个 `Object` 对象，该对象有 6 个属性：`top, left, right, bottom, width, height`
+```js
+const more = useRef()
+const top = more.current.getBoundingClientRect().top
+```
+
+
 ## 问题
 1. input 框 中英文不对齐问题: 先输入英文/数字，再输入中文，导致英文/数字下移
 解决办法：设置行高(baseline 设置无效)

@@ -20,8 +20,10 @@ export default withRouter(function City ({ history }) {
   }
 
   return (
-    <div>
-      <CommonHeader title={ '城市选择' } />
+    <div className="city__wrapper">
+      <CommonHeader>
+        <h1>城市选择</h1>
+      </CommonHeader>
       <CurrentCity city={ city.cityName } />
       <CityList data={ city_list } onClickEvent={ handleClickCity } />
     </div>

@@ -1,0 +1,44 @@
+@import '../../assets//css/variable.scss';
+
+.search__wrapper {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-top: 50px;
+
+  &--input {
+    width: auto;
+    display: flex;
+    height: 30px;
+    margin: 0 10px 0 35px;
+    transform: translateY(10px);
+  }
+
+  .search__result--item {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+    h3 {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      color: aliceblue;
+      z-index: 9;
+    }
+
+    &::after {
+      content: "";
+      float: left;
+      position: absolute;
+      width: 100%;
+      height: 30%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to top,  rgba(0, 0, 0, .8), transparent);
+    }
+  }
+}
