@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './index.scss'
 
 function HotView (props) {
@@ -11,10 +12,10 @@ function HotView (props) {
           data.map(item => {
             return (
               <li key={ item.id }>
-                <a href={ item.link }>
-                  <img src={ item.img } alt={ item.title } />
-                  <span>{ item.title }</span>
-                </a>
+              <Link to={ `/details/${item.id}` }>
+                <img src={ item.img } alt={ item.title } />
+                <span>{ item.title }</span>
+              </Link>
               </li>
             )
           })

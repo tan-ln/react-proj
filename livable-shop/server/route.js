@@ -9,7 +9,7 @@ const details = require('./data/details')
 router.get('/home/hot1', (req, resp) => {
   const city = req.query.cityName
   const data = home_hot.hot1.map(item => {
-    return {...item, title: city + item.title + '__new'}
+    return {...item, title: item.title + `(${city})`}
   })
   resp.send({
     status: 200,
@@ -20,7 +20,7 @@ router.get('/home/hot1', (req, resp) => {
 router.get('/home/hot2', (req, resp) => {
   const city = url.parse(req.url, true).query.cityName
   const data = home_hot.hot2.map(item => {
-    return {...item, title: city + item.title + '__hot'}
+    return {...item, title: item.title + `(${city})`}
   })
   resp.send({
     status: 200,
@@ -46,6 +46,23 @@ router.get('/details', (req, resp) => {
     status: 200,
     data
   })
+})
+
+// login
+router.post('/login', (req, resp) => {
+  console.log(req.body);
+  const { username, password } = req.body
+  if (username && password) {
+    resp.send({
+      status: 200,
+      token: 'asdlk13klasdmkl1389asdjkhsdkfhqwhk'
+    })
+  } else {
+    resp.send({
+      status: '401',
+      msg: 'Unauthorized! Wrong username or password!'
+    })
+  }
 })
 
 // mockjs

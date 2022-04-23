@@ -84,12 +84,39 @@ const more = useRef()
 const top = more.current.getBoundingClientRect().top
 ```
 
+2. express 接收 post 方式请求数据
+```js
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(express.urlencoded({ extended: true }))
+router.post('/login', (req, resp) => {
+  console.log(req.body);
+})
+```
+
 
 ## 问题
 1. input 框 中英文不对齐问题: 先输入英文/数字，再输入中文，导致英文/数字下移
 解决办法：设置行高(baseline 设置无效)
 
+2. 组件卸载，但仍处于渲染数据状态
+- 滚动未结束，跳转新页面，发起网络请求
+- setState
+- 定时器
 
+解决：清理 **事件(scroll)、定时器、网络请求**
+
+传统方式：unmounted
+react hook: (return () => {}) 组件卸载时执行的函数
+
+```js
+useEffect(() => {
+  return () => {
+    window.removeEventListener('scroll')
+    clearTimeout(timer)
+  }
+}, [])
+```
 
 
 

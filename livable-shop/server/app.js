@@ -1,10 +1,13 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
-const  cors = require('cors')
 const expressStatic = require('express-static')
+const bodyParser = require('body-parser')
 const router = require('./route')
 
 app.use(cors())
+app.use(bodyParser.json())
+app.use(express.urlencoded({ extended: true }))
 app.use('/api', router)
 app.use(expressStatic('./static'))
 

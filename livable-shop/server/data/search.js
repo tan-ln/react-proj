@@ -23,5 +23,20 @@ module.exports = [
     id: '35234',
     title: '海绵宝宝历险记',
     img: 'https://i0.hdslb.com/bfs/bangumi/image/6a80e1bd1c1c469f44c0cea3d24a48ad881fea40.png'
+  },
+  {
+    id: '234786',
+    title: '逃避虽可耻但有用',
+    img: 'https://i0.hdslb.com/bfs/bangumi/7e65c966b1fd7cf8cd49da89d394546fee18d9ed.jpg',
+  },
+  {
+    id: '12334',
+    title: '孤独的美食家',
+    img: 'https://i0.hdslb.com/bfs/bangumi/2785d9af3fa2dfcfc568ba1ea5c1ef870f7820e7.jpg',
+  },
+  {
+    id: '62347',
+    title: '乡村爱情',
+    img: 'https://i0.hdslb.com/bfs/bangumi/image/9566de8ac2511b7868769c853fe9ca8aeaeecf82.jpg',
   }
 ]

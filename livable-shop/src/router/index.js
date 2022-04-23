@@ -9,6 +9,7 @@ import City from "../pages/City";
 import Nav from "../components/Nav";
 import Search from "../pages/Search";
 import Details from "../pages/Details";
+import Login from "../pages/Login";
 
 const AppRouter = () => {
   return (
@@ -17,6 +18,7 @@ const AppRouter = () => {
         <Route path="/city" component={ City }></Route>
         <Route path="/search" component={ Search }></Route>
         <Route path="/details/:id" component={ Details }></Route>
+        <Route path="/login" component={ Login }></Route>
         <Layout>
         {/* 4 导航页面共享组件 */}
           <Nav />

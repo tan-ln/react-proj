@@ -5,7 +5,8 @@ const base = {
   home_hot1: '/api/home/hot1',
   home_hot2: '/api/home/hot2',
   search: '/api/s',
-  details: '/api/details'
+  details: '/api/details',
+  login: '/api/login'
 }
 
 const api = {
@@ -23,6 +24,10 @@ const api = {
   // details
   getDetails(params) {
     return axios.get(base.url + base.details, { params })
+  },
+  // login
+  doLogin(params) {
+    return axios.post(base.url + base.login, { ...params })
   }
 }
 

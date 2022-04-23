@@ -4,7 +4,7 @@ import './index.scss'
 function Swiper () {
   return (
     <div className="home__swiper">
-      <img src="http://localhost:1234/pic/swiper.png" alt="static__pic" />
+      <img src="https://i0.hdslb.com/bfs/banner/f7ec621f0f0d7467fcd4ce5abaa4e04ff8392209.png" alt="static__pic" />
     </div>
   )
 }

@@ -38,12 +38,12 @@
   }
 
   .details__content {
-    padding: 20px;
+    padding: 10px 20px 20px;
     color: #ccc;
     height: calc(100vh - 550px);
     overflow: hidden;
     p {
-      @include ellipse__4;
+      @include mul_ellipse;
     }
   }
 }

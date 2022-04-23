@@ -19,6 +19,12 @@ export default function Search () {
         setSearchRes(res.data.data)
       }
     })
+
+    // 组件卸载时执行的函数，
+    return () => {
+      setSearchRes([])
+      setHasMore(false)
+    }
   }, [keywords])
 
   const handleLoadMore = () => {

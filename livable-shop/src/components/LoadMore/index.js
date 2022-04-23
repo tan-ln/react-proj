@@ -8,7 +8,7 @@ export default function LoadMore ({ handleLoadMore, hasMore }) {
   useEffect(() => {
     const clientHeight = document.documentElement ? document.documentElement.clientHeight : document.body.clientHeight
     let timer = null
-    window.addEventListener('scroll', () => {
+    const scrollHandler = () => {
       if (!more.current) return
       // 加载更多 元素 距顶部
       // const top = more.current.getBoundingClientRect().top
@@ -23,7 +23,14 @@ export default function LoadMore ({ handleLoadMore, hasMore }) {
           }
         }, 300);
       }
-    })
+    }
+    window.addEventListener('scroll', scrollHandler)
+
+    // unmounted 清理定时器、事件
+    // return () => {
+      // window.removeEventListener('scroll', scrollHandler)
+    //   clearTimeout(timer)
+    // }
   }, [top, handleLoadMore])
   return (
     <div className="load__more--wrapper" ref={ more }>
