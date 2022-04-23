@@ -8,6 +8,7 @@ import User from "../pages/Main/User";
 import City from "../pages/City";
 import Nav from "../components/Nav";
 import Search from "../pages/Search";
+import Details from "../pages/Details";
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
       <Switch>
         <Route path="/city" component={ City }></Route>
         <Route path="/search" component={ Search }></Route>
+        <Route path="/details/:id" component={ Details }></Route>
         <Layout>
         {/* 4 导航页面共享组件 */}
           <Nav />

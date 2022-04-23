@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import CommonHeader from "../../components/CommonHeader";
 import SearchInput from '../../components/SearchInput'
 import LoadMore from "../../components/LoadMore";
@@ -43,10 +43,12 @@ export default function Search () {
       {
         searchRes.length > 0 && searchRes.map((item, idx) => {
           return (
-            <div className="search__result--item" key={ item.id + idx }>
-              <img src={ item.img } alt={ item.title } />
-              <h3>{ item.title }</h3>
-            </div>
+            <Link to={ `/details/${item.id}` } key={ item.id + idx }>
+              <div className="search__result--item">
+                <img src={ item.img } alt={ item.title } />
+                <h3>{ item.title }</h3>
+              </div>
+            </Link>
           )
         })
       }

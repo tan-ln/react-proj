@@ -4,7 +4,8 @@ const base = {
   url: 'http://localhost:1234',
   home_hot1: '/api/home/hot1',
   home_hot2: '/api/home/hot2',
-  search: '/api/s'
+  search: '/api/s',
+  details: '/api/details'
 }
 
 const api = {
@@ -18,6 +19,10 @@ const api = {
   // search result
   getSearchRes(params) {
     return axios.get(base.url + base.search, { params })
+  },
+  // details
+  getDetails(params) {
+    return axios.get(base.url + base.details, { params })
   }
 }
 
