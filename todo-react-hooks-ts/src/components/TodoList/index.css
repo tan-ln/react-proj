@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+  margin-top: 100px;
+}
+.todo__list--wrapper {
+  display: inline-block;
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 4px rgb(235, 235, 235);
+  overflow: hidden;
+  text-align: left;
+  padding: 50px;
+}
+
+.todo__list--wrapper h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(124, 152, 192);
+  font-weight: 800;
+  font-style: italic;
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #fff;
+}
+
+input[type='text'] {
+  border: none;
+  background-color: rgb(243, 243, 243);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+input[type='checkbox'] {
+  vertical-align: middle;
+}
+
+
+
+button {
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  height: 30px;
+}
+.td__input--wrapper {
+  height: 50px;
+  line-height: 50px;
+}
+.td__input--wrapper button {
+  background-color: rgb(52, 118, 180);
+  color: aliceblue;
+  padding: 4px 10px;
+}
+
+.td__item--wrapper button {
+  background-color: rgb(180, 82, 52);
+  color: aliceblue;
+  font-size: 12px;
+}
+
+.td__item--wrapper {
+  margin: 10px 0;
+  vertical-align: middle;
+  height: 30px;
+  line-height: 30px;
+}
+
+.td__item--wrapper span {
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
